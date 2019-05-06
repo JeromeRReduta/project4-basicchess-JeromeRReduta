@@ -8,7 +8,9 @@ public class Bishop extends ChessPiece {
    public int[] move(int x, int y, int newX, int newY) throws IllegalChessMoveException {
 
        int[] newPos = {ChessBoard.xToCol(newX), ChessBoard.yToRow(newY)};
-       if (x - newX != y - newY) {
+       if (Math.abs(x - newX) != Math.abs(y - newY)) {
+           System.out.println(x - newX);
+           System.out.println(y - newY);
            throw new IllegalChessMoveException("Error - Bishop can only move" +
                    " straight diagonally");
        }

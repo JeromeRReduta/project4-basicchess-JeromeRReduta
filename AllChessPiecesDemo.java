@@ -53,8 +53,8 @@ public class AllChessPiecesDemo {
 
         // Bishop
         pieces.add(new Bishop(ChessPiece.DOWN));
-        System.out.println(Arrays.toString(pieces.get(0).move(5, 5, 7, 7)));
-        int[][] path = pieces.get(0).getPossibleCollisions(5, 5, 7, 7);
+        System.out.println(Arrays.toString(pieces.get(0).move(5, 7, 6, 6)));
+        int[][] path = pieces.get(0).getPossibleCollisions(5, 7, 6, 6);
         pieces.get(0).printPossibleCollisions(path, true);
         pieces.get(0).printPossibleCollisions(path, false);
         System.out.println("\n\n");
@@ -65,13 +65,13 @@ public class AllChessPiecesDemo {
         System.out.println("KING: \n");
         ChessPiece piece = new King(ChessPiece.DOWN);
         System.out.println("\n\n KING:");
-        System.out.println(Arrays.toString(piece.move(5, 5, 5, 6)));
-        System.out.println(Arrays.toString(piece.move(5, 5, 4, 5)));
-        System.out.println(Arrays.toString(piece.move(5, 5, 6, 6)));
+        System.out.println(Arrays.toString(piece.move(3, 0, 3, 1)));
+        //System.out.println(Arrays.toString(piece.move(5, 5, 4, 5)));
+        //System.out.println(Arrays.toString(piece.move(5, 5, 6, 6)));
 
         // System.out.println(Arrays.toString(piece.move(5, 5, 3, 5))); To cause exception
 
-        int[][] path = piece.getPossibleCollisions(5, 5, 6, 6);
+        int[][] path = piece.getPossibleCollisions(3, 0, 3, 1);
         piece.printPossibleCollisions(path, true);
         System.out.println("Expected: [7, 1]");
         piece.printPossibleCollisions(path, false);
@@ -103,9 +103,13 @@ public class AllChessPiecesDemo {
         printMoveArray(piece.move(5, 5, 7, 5));
         printMoveArray(piece.move(5, 5, 5, 7));
 
+        printMoveArray(piece.move(4, 7, 4, 6));
+
         // printMoveArray(piece.move(5, 5, 4, 3)); Made to cause exception
 
-        int[][] path = piece.getPossibleCollisions(3, 3, 7, 7);
+        int[][] path = piece.getPossibleCollisions(4, 7, 4, 6);
+
+        System.out.println(ChessBoard.xToCol(4) + ", " + ChessBoard.yToRow(6));
         piece.printPossibleCollisions(path, true);
         System.out.println("Expected: [5, 3] -> [6, 2] -> [7, 1] -> [8, 0]");
         piece.printPossibleCollisions(path, false);
@@ -131,13 +135,17 @@ public class AllChessPiecesDemo {
         // All tested - take as many as you need out and try it out
         /* testPawn();
         testBishop();
-        testKing();
-        testKnight();
-        testQueen();
 
+        testKnight();
+
+testQueen();
         testRook();
 
          */
+
+        testKing();
+
+
 
 
 

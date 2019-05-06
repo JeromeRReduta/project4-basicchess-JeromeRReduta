@@ -3,7 +3,7 @@ import java.security.cert.CertSelector;
 public class Queen extends ChessPiece {
 
     public Queen(int newDir) {
-        super("q", newDir);
+        super("Q", newDir);
     }
 
     // Queen can move anywhere in a straight line
@@ -28,8 +28,8 @@ public class Queen extends ChessPiece {
 
         // Determines whether queen asked to move up or down,
         // ...left or right
-        if (newX > x) xDir = 1; else xDir = -1;
-        if (newY > y) yDir = 1; else yDir = -1;
+        if (newX > x) xDir = 1; else if (newX < x) xDir = -1; else xDir = 0;
+        if (newY > y) yDir = 1; else if (newY < y) yDir = -1; else yDir = 0;
 
         // Takes path of queen moving from (x, y) to (newX, newY)
         for (int index = 1; index <= limit; index++) {

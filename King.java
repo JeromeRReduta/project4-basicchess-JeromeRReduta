@@ -1,6 +1,6 @@
 public class King extends ChessPiece {
     public King(int newDir) {
-        super("k", newDir);
+        super("K", newDir);
     }
 
 
@@ -27,7 +27,7 @@ public class King extends ChessPiece {
         int nextCol = ChessBoard.xToCol(x + xDir);
         int nextRow = ChessBoard.yToRow(y + yDir);
 
-        int[][] path = {{nextCol, nextCol}};
+        int[][] path = {{nextCol, nextRow}};
 
         return path;
     }

@@ -9,10 +9,12 @@ public class ChessGame {
     // Given starter code by Prof. Leese, edited by me
 
     // Make stuff
-    Scanner scan = new Scanner(new File("input.txt"));
+    Scanner scan = new Scanner(new File("complete_board.txt"));
     String line;
     String[] lineSegment;
     ChessBoard board = new ChessBoard();
+
+
 
 
     // Create board states that reflect what given file asks it

@@ -12,6 +12,8 @@ Finished by 5 May, 11:00 PM (Happy Cinco de Mayo!)
 
         Professor Leese, for help on project
 
+        https://stackoverflow.com/questions/726652/creating-a-logical-exclusive-or-operator-in-java
+            For introducing me to "exclusive or:" ^
         Thanks for https://stackoverflow.com/questions/11553042/the-system-cannot-find-the-file-specified-in-java
             // taught me how to see if the file I am looking for is in the same director
             // as this file, and showed me that there was one ' at the end
